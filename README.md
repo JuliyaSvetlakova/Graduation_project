@@ -1,3 +1,7 @@
+![Allure Postgres_23_10](https://github.com/JuliyaSvetlakova/Graduation_project/assets/133027664/6977ee63-5d3b-45e3-a4b3-eed8a2fb627e)
+
+
+
 # Для запуска автотестов нужно заранее установить и настроить:
 **Операционная система:** Windows 10
 
