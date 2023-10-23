@@ -31,6 +31,7 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.3'
     testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
+    testImplementation 'io.zonky.test:embedded-postgres:2.0.2'
 }
 
 test {
