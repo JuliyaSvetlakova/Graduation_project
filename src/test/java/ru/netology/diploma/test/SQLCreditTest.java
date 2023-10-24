@@ -9,9 +9,9 @@ import ru.netology.diploma.page.CreditPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.netology.diploma.data.SQLHelper.cleanDatabasePostgres;
+import static ru.netology.diploma.data.SQLHelper.cleanDatabaseSQL;
 
-public class PostgresCreditTest {
+public class SQLCreditTest {
     CreditPage creditPage;
     @BeforeAll
     static void setUpAll() {
@@ -26,13 +26,14 @@ public class PostgresCreditTest {
         creditPage = open("http://localhost:8080", CreditPage.class);
         creditPage.goToTheCreditPage();
     }
+
     @AfterEach
     void tearDown() {
-        cleanDatabasePostgres();
+        cleanDatabaseSQL();
     }
 
     @Test
-    void sendingCreditFormWithApprovedValidDataGetStatusPostgres() { //отправка формы c Одобренными Действительными Данными получить статус
+    void sendingCreditFormWithApprovedValidDataGetStatusMySQL() { //отправка формы c Одобренными Действительными Данными получить статус
         creditPage.fillingInTheCardNumberField(DataHelper.getFirstCardNumberInfo());
         creditPage.fillingInTheMonthField(DataHelper.getMonthInfo());
         creditPage.fillingInTheYearField(DataHelper.getNextYearInfo());
@@ -41,11 +42,11 @@ public class PostgresCreditTest {
         creditPage.submittingForm();
         creditPage.verifyOkNotification("Операция одобрена Банком.");
         assertEquals("APPROVED",
-                SQLHelper.getCreditStatusInfoPostgres().getStatus());
+                SQLHelper.getCreditStatusInfoSQL().getStatus());
     }
 
     @Test
-    void sendingCreditFormWithDeclinedValidDataGetStatusPostgres() { //отправка формы c Оотклоненными Действительными Данными получить статус
+    void sendingCreditFormWithDeclinedValidDataGetStatusMySQL() { //отправка формы c Оотклоненными Действительными Данными получить статус
         creditPage.fillingInTheCardNumberField(DataHelper.getSecondCardNumberInfo());
         creditPage.fillingInTheMonthField(DataHelper.getMonthInfo());
         creditPage.fillingInTheYearField(DataHelper.getNextYearInfo());
@@ -54,6 +55,6 @@ public class PostgresCreditTest {
         creditPage.submittingForm();
         creditPage.verifyOkNotification("Операция одобрена Банком.");
         assertEquals("DECLINED",
-                SQLHelper.getCreditStatusInfoPostgres().getStatus());
+                SQLHelper.getCreditStatusInfoSQL().getStatus());
     }
 }
