@@ -1,3 +1,5 @@
+![MySQL](https://github.com/JuliyaSvetlakova/Graduation_project/assets/133027664/46f9a5fb-94ea-4ea8-8f55-a69ed2f1bbab)
+
 # Для запуска автотестов нужно заранее установить и настроить:
 **Операционная система:** Windows 10
 
@@ -29,8 +31,8 @@
 
 **Проектная документация находится в папке docs**
 
-*План автоматизации Plan:*
+*План автоматизации Plan:* https://github.com/JuliyaSvetlakova/Graduation_project/blob/main/docs/Plan.md#%D0%BF%D0%BB%D0%B0%D0%BD-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8 
 
-*Отчет по итогам тестирования Report:*
+*Отчет по итогам тестирования Report:* https://github.com/JuliyaSvetlakova/Graduation_project/blob/main/docs/Report.md 
 
-*Отчет по итогам автоматизации Summary:*
+*Отчет по итогам автоматизации Summary:* https://github.com/JuliyaSvetlakova/Graduation_project/blob/main/docs/Summary.md  
